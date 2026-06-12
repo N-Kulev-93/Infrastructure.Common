@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".dockerignore" />
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="Infrastructure.Logger.Monitor/Infrastructure.Logger.Monitor.csproj" Id="1b687987-060f-43db-8a3a-846d5125a26d" />
+  <Project Path="Infrastructure.Playground/Infrastructure.Playground.csproj" />
+  <Project Path="Infrastructure.Logger/Infrastructure.Logger.csproj" />
+</Solution>
