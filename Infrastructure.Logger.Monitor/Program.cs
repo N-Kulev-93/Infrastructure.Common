@@ -1,4 +1,5 @@
 using JJConsulting.Infisical.Configuration;
+using OpenTelemetry.Metrics;
 
 namespace Infrastructure.Logger.Monitor
 {
@@ -21,8 +22,12 @@ namespace Infrastructure.Logger.Monitor
             builder.Services
                 .AddLogsMonitorServices(builder.Configuration);
 
+            builder.Services.AddOpenTelemetry()
+    .WithMetrics(builder => builder.AddPrometheusExporter());
+
             var app = builder.Build();
 
+            app.MapPrometheusScrapingEndpoint();
             // Configure the HTTP request pipeline.
 
             app.UseAuthorization();
